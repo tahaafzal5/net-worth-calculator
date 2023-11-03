@@ -1,0 +1,23 @@
+.circle-question-mark {
+    position: relative;
+    display: inline-block;
+}
+
+.circle-question-mark .hover-popup {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 100px;
+    height: auto;
+    top: -15px;
+    z-index: 1;
+    font-size: 12px;
+    font-weight: normal;
+    left: 15px;
+}
+
+.circle-question-mark:hover .hover-popup {
+    display: block;
+}

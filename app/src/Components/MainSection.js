@@ -23,9 +23,12 @@ function MainSection() {
     };
     return (
         <div className="main-section">
-            <NetWorthGroup category={Category.ASSETS} items={assets} onTotalChange={(total) => handleTotalChange(Category.ASSETS, total)} />
-            <NetWorthGroup category={Category.LIABILITIES} items={liabilities} onTotalChange={(total) => handleTotalChange(Category.LIABILITIES, total)} />
-            <NetWorthOutput title="Net Worth" assetsTotal={assetsTotal} liabilitiesTotal={liabilitiesTotal} />
+            <NetWorthGroup category={Category.ASSETS} items={assets} hoverText={"An asset is something that has value and/or puts money \
+            in your pocket because it generates income and/or cash flow."} onTotalChange={(total) => handleTotalChange(Category.ASSETS, total)} />
+            <NetWorthGroup category={Category.LIABILITIES} items={liabilities} hoverText={"A liability moves money out of your pocket \
+            and causes costs for you."} onTotalChange={(total) => handleTotalChange(Category.LIABILITIES, total)} />
+            <NetWorthOutput title="Net Worth" assetsTotal={assetsTotal} liabilitiesTotal={liabilitiesTotal} hoverText={"Net Worth is just \
+            the difference between your assets and liabilities."} />
         </div>
     );
 }
