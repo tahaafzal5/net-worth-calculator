@@ -9,17 +9,22 @@ function MainSection() {
     const [assetsTotal, setAssetsTotal] = useState(0);
     const [liabilitiesTotal, setLiabilitiesTotal] = useState(0);
 
+    const Category = {
+        ASSETS: 'Assets',
+        LIABILITIES: 'Liabilities',
+    };
+
     const handleTotalChange = (category, total) => {
-        if (category === 'Assets') {
+        if (category === Category.ASSETS) {
             setAssetsTotal(total);
-        } else if (category === 'Liabilities') {
+        } else if (category === Category.LIABILITIES) {
             setLiabilitiesTotal(total);
         }
     };
     return (
         <div className="main-section">
-            <NetWorthGroup category="Assets" items={assets} onTotalChange={(total) => handleTotalChange('Assets', total)} />
-            <NetWorthGroup category="Liabilities" items={liabilities} onTotalChange={(total) => handleTotalChange('Liabilities', total)} />
+            <NetWorthGroup category={Category.ASSETS} items={assets} onTotalChange={(total) => handleTotalChange(Category.ASSETS, total)} />
+            <NetWorthGroup category={Category.LIABILITIES} items={liabilities} onTotalChange={(total) => handleTotalChange(Category.LIABILITIES, total)} />
             <NetWorthOutput title="Net Worth" assetsTotal={assetsTotal} liabilitiesTotal={liabilitiesTotal} />
         </div>
     );
