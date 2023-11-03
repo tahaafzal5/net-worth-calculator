@@ -12,7 +12,7 @@ function NetWorthGroup({ category, items, onTotalChange }) {
 
     return (
         <div>
-            <h2>{category} <img src={circleQuestionMark} width={15} /> </h2>
+            <h2>{category} <img src={circleQuestionMark} width={15} alt='question mark' /> </h2>
             <NetWorthItem category={category} items={items} onTotalChange={handleTotalChange} />
         </div>
     );
