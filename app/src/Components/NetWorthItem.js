@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../Styles/NetWorthItem.css';
 
-function NetWorthItem({ items, onTotalChange }) {
+function NetWorthItem({ category, items, onTotalChange }) {
     const [itemValues, setItemValues] = useState(Array(items.length));
 
     const handleItemInputChange = (event, index) => {
@@ -49,7 +49,7 @@ function NetWorthItem({ items, onTotalChange }) {
                 </ul>
             </div>
             <div>
-                Total: {calculateTotal()}
+                Total {category.toLowerCase()}: {calculateTotal()}
             </div>
         </div>
     );
