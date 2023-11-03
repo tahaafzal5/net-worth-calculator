@@ -1,4 +1,4 @@
-import circleQuestionMark from '../Assets/Images/circle-question-mark.png';
+import CircleQuestionMark from "./CircleQuestionMark";
 
 function NetWorthOutput({ title, assetsTotal, liabilitiesTotal }) {
     const assets = parseFloat(assetsTotal) || 0;
@@ -11,7 +11,7 @@ function NetWorthOutput({ title, assetsTotal, liabilitiesTotal }) {
 
     return (
         <div>
-            <h2>{title} <img src={circleQuestionMark} width={15} alt='question mark' /> </h2>
+            <h2>{title} <CircleQuestionMark /></h2>
             {netWorth}
         </div>
     );
