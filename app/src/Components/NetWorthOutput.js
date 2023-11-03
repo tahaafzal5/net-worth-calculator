@@ -13,7 +13,6 @@ function NetWorthOutput({ title, assetsTotal, liabilitiesTotal }) {
         <div>
             <h2>{title} <img src={circleQuestionMark} width={15} alt='question mark' /> </h2>
             {netWorth}
-
         </div>
     );
 }
