@@ -7,7 +7,7 @@ Made for Midco's Software Developer Interview.
 Before you begin, ensure you have Node.js installed.
 
 ## Build
-- After cloning the repo, `cd` into `net-worth-calculator`
+- After cloning the repo, `cd` into `net-worth-calculator/app/`
 - Run `npm install`
 
 ## Run Locally
